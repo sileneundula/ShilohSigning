@@ -23,6 +23,10 @@ These digital signatures have played an important role in everyday lives in secu
 
 They are long-term solutions to signing in certain situations where high-integrity is needed. Both offer short public keys and private keys, while SPHINCS+ offers a large signature, that can be valid in certain situations. Due to the security assumptions behind SPHINCS+, we believe this will stand as a high-integrity signing mechanism.
 
+## 2.1.1 Encoding of SPHINCS+ Signatures
+
+Signatures for SPHINCS+ should be encoded in base58 to allow only needed characters to be shown to provide a simple interface.
+
 ## 2.1.1 SPHINCS+
 
 SPHINCS+ is a stateless hash-based signing scheme that offers a large security margin. Due to the inherent security assumptions behind hash functions, we believe this will be a powerful signature scheme for post-quantum cryptography offering a large margin of security with simple measures. SPHINCS+ uses Haraka, SHA256, or SHAKE256, and in this instance, SHAKE256 should be preferred for optimal security. It has three categories of security, {1, 3, 5}. It is recomended to use security level 5 for high-security as there is not much of a difference aside from signature size.
