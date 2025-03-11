@@ -25,7 +25,13 @@ They are long-term solutions to signing in certain situations where high-integri
 
 ## 2.1.1 SPHINCS+
 
-SPHINCS+ is a stateless hash-based signing scheme that offers a large security margin. Due to the inherent security assumptions behind hash functions, we believe this will be a powerful signature scheme for post-quantum cryptography offering a large margin of security with simple measures. SPHINCS+ uses Haraka, SHA256, or SHAKE256, and in this instance, SHAKE256 should be preferred for optimal security.
+SPHINCS+ is a stateless hash-based signing scheme that offers a large security margin. Due to the inherent security assumptions behind hash functions, we believe this will be a powerful signature scheme for post-quantum cryptography offering a large margin of security with simple measures. SPHINCS+ uses Haraka, SHA256, or SHAKE256, and in this instance, SHAKE256 should be preferred for optimal security. It has three categories of security, {1, 3, 5}. It is recomended to use security level 5 for high-security as there is not much of a difference aside from signature size.
+
+This signature scheme remains high-integrity and is integral to creating a secure signing environment in the near future.
+
+## 2.1.2 SPHINCS+ Chosen Hash Function
+
+SHAKE256 is chosen as the hash-function because SHA256 has length-extension attacks and is considered less secure than SHA3 (SHAKE256, Keccak). It is more modern using the sponge function and has a larger internal state.
 
 ## 2.1.3 Shortening SPHINCS+ Signatures
 
