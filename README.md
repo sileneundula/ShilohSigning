@@ -14,7 +14,15 @@ Digital Signatures are a technique is cryptography that allow a user to sign dat
 
 `ShulginSignatures` are a hybrid digital signature scheme that use post-quantum cryptography with classical cryptography to guarantee the integrity of the signature. They are based on strong security assumptions and use the following algorithms:
 
-* SPHINCS+ (SHAKE256)
-* Ed448 (SHAKE256) (with hedged signatures)
+* SPHINCS+ (using SHAKE256)
+* Ed448 (SHAKE256) (with the addition of hedged signatures)
 
 They are long-term solutions to signing in certain situations where high-integrity is needed. Both offer short public keys and private keys, while SPHINCS+ offers a large signature, that can be valid in certain situations. Due to the security assumptions behind SPHINCS+, we believe this will stand as a high-integrity signing mechanism.
+
+## 2.1.1 SPHINCS+
+
+SPHINCS+ is a stateless hash-based signing scheme that offers a large security margin. Due to the inherent security assumptions behind hash functions, we believe this will be a powerful signature scheme for post-quantum cryptography offering a large margin of security with simple measures. SPHINCS+ uses Haraka, SHA256, or SHAKE256, and in this instance, SHAKE256 should be preferred for optimal security.
+
+## 2.1.3 Shortening SPHINCS+ Signatures
+
+SPHINCS+ Signatures can be shortened by hashing the signature and storing the hash instead in a manner where it can be retrieved easily by its identifier (the hash). This allows signatures to be kept small and integrity to still be intact.
