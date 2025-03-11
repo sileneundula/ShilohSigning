@@ -8,7 +8,11 @@ This paper is easy to understand and presents this signing scheme to be used in 
 
 ## 1. Introduction
 
-Digital Signatures are a technique is cryptography that allow a user to sign data with a cryptographic signature using public key cryptography. These allow one to verify the validility of the data/message against that of the public key and signature to see if it is really valid.
+Digital Signatures are a technique is cryptography that allow a user to sign data with a cryptographic signature using public key cryptography. These allow one to verify the validility of the data/message against that of the public key and signature to see if it is really valid. There have been many public key systems used, including but not limited to, RSA, ECDSA, and EdDSA for signing.
+
+The secret key is used to generate the signature from the given input and is validated by the public key and message.
+
+These digital signatures have played an important role in everyday lives in securing the internet, blockchains, certificates, and more.
 
 ## 2. ShulginSignatures
 
