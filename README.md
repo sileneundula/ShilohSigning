@@ -31,7 +31,7 @@ Signatures for SPHINCS+ should be encoded in base58 to allow only needed charact
 
 SPHINCS+ is a stateless hash-based signing scheme that offers a large security margin. Due to the inherent security assumptions behind hash functions, we believe this will be a powerful signature scheme for post-quantum cryptography offering a large margin of security with simple measures. SPHINCS+ uses Haraka, SHA256, or SHAKE256, and in this instance, SHAKE256 should be preferred for optimal security. It has three categories of security, {1, 3, 5}. It is recomended to use security level 5 for high-security as there is not much of a difference aside from signature size.
 
-SPHINCS+ makes use of a hypertree to make a tree of one-time digital signatures that can be created using the private key. SPHINCS+ uses a few-time signatures tree at the bottom known as FORS.
+SPHINCS+ makes use of a hypertree to make a tree of one-time digital signatures that can be created using the private key. SPHINCS+ uses a few-time signatures tree at the bottom known as FORS. It uses WOTS+ to sign.
 
 This signature scheme remains high-integrity and is integral to creating a secure signing environment in the near future.
 
