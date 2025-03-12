@@ -42,3 +42,7 @@ SHAKE256 is chosen as the hash-function because SHA256 has length-extension atta
 ## 2.1.3 Shortening SPHINCS+ Signatures
 
 SPHINCS+ Signatures can be shortened by hashing the signature and storing the hash instead in a manner where it can be retrieved easily by its identifier (the hash). This allows signatures to be kept small and integrity to still be intact.
+
+## 3. Ed448 (with hedged signatures)
+
+We present the usage of ED448, a determinstic signing elliptic curve based digital signature scheme with more security than its predecesssor, ed25519. This signature scheme uses SHAKE256 as opposed to SHA256 in ED25519. It would be highly likely that using it with a hedged signature (by generating cryptographic randomness for each signature on top of the deterministic signature) would make it a great candidate for ShulginSigning.
