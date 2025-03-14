@@ -46,3 +46,10 @@ SPHINCS+ Signatures can be shortened by hashing the signature and storing the ha
 ## 3. Ed448 (with hedged signatures)
 
 We present the usage of ED448, a determinstic signing elliptic curve based digital signature scheme with more security than its predecesssor, ed25519. This signature scheme uses SHAKE256 as opposed to SHA256 in ED25519. It would be highly likely that using it with a hedged signature (by generating cryptographic randomness for each signature on top of the deterministic signature) would make it a great candidate for ShulginSigning.
+
+## Resources
+
+1. [Hedged ECDSA and EdDSA Signatures](https://www.ietf.org/archive/id/draft-irtf-cfrg-det-sigs-with-noise-03.html)
+2. [SPHINCS+ Website](https://sphincs.org/)
+3. [SPHINCS+ Whitepaper](https://sphincs.org/data/sphincs+-paper.pdf)
+4. [RFC8032](https://datatracker.ietf.org/doc/html/rfc8032)
